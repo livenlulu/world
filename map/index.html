@@ -14,9 +14,9 @@
 <body>
 	<div id="map"></div>
 	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-	<script src="lib/fancybox/jquery.fancybox.pack.js"></script>		
 	<script src="lib/reqwest.min.js"></script>
 	<script src="lib/leaflet/leaflet.js"></script>
+	<script src="lib/fancybox/jquery.fancybox.pack.js"></script>		
 	<script src="lib/cluster/leaflet.markercluster.js"></script>			
 	<script src="../dist/Leaflet.Instagram.Fancybox.Cluster.js"></script>		
 	<script>
@@ -40,10 +40,9 @@
 	// }
 	// ).addTo(map); 
 
-
-L.instagram.cluster('https://api.instagram.com/v1/users/6779417/media/recent?access_token=6779417.4b0e503.fab86a7216c047a8abad6c68c9e528dd', {
-	featureGroup: L.instagram.fancybox 
-}).addTo(map);
+	L.instagram.cluster('https://api.instagram.com/v1/users/6779417/media/recent?access_token=6779417.4b0e503.fab86a7216c047a8abad6c68c9e528dd', {
+		featureGroup: L.instagram.fancybox 
+	}).addTo(map);
 
 	</script>
 </body>
