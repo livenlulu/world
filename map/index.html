@@ -32,12 +32,14 @@
 
 	var map = L.map('map', {
 		maxZoom: 15,
-		minZoom: 2
+		minZoom: 2,
+		
+		attributionControl: false 
 	}).setView([24.126702,-64.775391], 2);
 
 
 	L.tileLayer('https://api.mapbox.com/styles/v1/livenlulu/civkjjf2j008d2juzkxe9a7j5/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibGl2ZW5sdWx1IiwiYSI6ImNpZ3h0ZzltbzB1cTQ0cG0zamthcno1dmwifQ.vZrmbXCCq15ZVuF6g6vhkA',{
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+    attribution: ''
 	}).addTo(map);
 
 	// L.instagram.cluster('http://turban.cartodb.com/api/v2/sql?q=SELECT * FROM instagram WHERE the_geom %26%26 ST_SetSRID(ST_MakeBox2D(ST_Point(5.727, 59.124), ST_Point(5.924, 59.305)), 4326)', {
@@ -46,7 +48,7 @@
 	// ).addTo(map); 
 
 	L.instagram.cluster('https://api.instagram.com/v1/users/6779417/media/recent?access_token=6779417.1dce8d8.1c349d7afd1949a4809a03cc48ae52e9', {
-		featureGroup: L.instagram.fancybox 
+		featureGroup: L.instagram.fancybox
 	}).addTo(map);
 
 	</script>
